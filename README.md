@@ -1,66 +1,123 @@
-This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
+# 📝 Contentful Custom App - Slug Generator  
 
-## Available Scripts
+<p>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8buri8TAq9hRdlFa7_9xCejlF_-AWjXFDNg&s" alt="Contentful Logo" width="300"/>
+</p>
 
-In the project directory, you can run:
+A **custom Contentful app** that automatically generates **SEO-friendly slugs** from page titles — similar to the **Sanity slug generator** 🪄.  
+No more manual typing, just clean and consistent slugs for your content.
 
-#### `npm start`
+---
 
-Creates or updates your app definition in Contentful, and runs the app in development mode.
-Open your app to view it in the browser.
+## ✨ Features  
+- 🔠 Generate slugs automatically from **page name / title**  
+- ✏️ Edit slugs manually when needed  
+- 🛡️ Ensures lowercase, hyphenated, SEO-friendly strings  
+- ⚡ Integrated seamlessly into Contentful entry editor  
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+---
 
-#### `npm run build`
+## 📂 Project Structure  
+```
+├── build/             # Production build files
+├── public/            # Static assets
+├── src/               # React source code
+├── test/mocks/        # Test mocks
+├── .gitignore
+├── package.json
+└── README.md
+```
+---
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Installation  
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-#### `npm run upload`
-
-Uploads the build folder to contentful and creates a bundle that is automatically activated.
-The command guides you through the deployment process and asks for all required arguments.
-Read [here](https://www.contentful.com/developers/docs/extensibility/app-framework/create-contentful-app/#deploy-with-contentful) for more information about the deployment process.
-
-#### `npm run upload-ci`
-
-Similar to `npm run upload` it will upload your app to contentful and activate it. The only difference is  
-that with this command all required arguments are read from the environment variables, for example when you add
-the upload command to your CI pipeline.
-
-For this command to work, the following environment variables must be set:
-
-- `CONTENTFUL_ORG_ID` - The ID of your organization
-- `CONTENTFUL_APP_DEF_ID` - The ID of the app to which to add the bundle
-- `CONTENTFUL_ACCESS_TOKEN` - A personal [access token](https://www.contentful.com/developers/docs/references/content-management-api/#/reference/personal-access-tokens)
-
-## Libraries to use
-
-To make your app look and feel like Contentful use the following libraries:
-
-- [Forma 36](https://f36.contentful.com/) – Contentful's design system
-- [Contentful Field Editors](https://www.contentful.com/developers/docs/extensibility/field-editors/) – Contentful's field editor React components
-
-## Using the `contentful-management` SDK
-
-In the default create contentful app output, a contentful management client is
-passed into each location. This can be used to interact with Contentful's
-management API. For example
-
-```js
-// Use the client
-cma.locale.getMany({}).then((locales) => console.log(locales));
+1. Clone the repo:  
+```bash
+gh repo clone maheshmthorat/contentful-custom-app-slug-generator
+cd contentful-custom-app-slug-generator
 ```
 
-Visit the [`contentful-management` documentation](https://www.contentful.com/developers/docs/extensibility/app-framework/sdk/#using-the-contentful-management-library)
-to find out more.
+2. Install dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-[Read more](https://www.contentful.com/developers/docs/extensibility/app-framework/create-contentful-app/) and check out the video on how to use the CLI.
+3. Start development:
 
-Create Contentful App uses [Create React App](https://create-react-app.dev/). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) and how to further customize your app.
+```bash
+npm start
+```
+
+---
+
+## 🚀 Deployment to Contentful
+
+### 1. Build the app
+
+```bash
+npm run build
+```
+
+### 2. Create App Definition
+
+```bash
+npm run create-app-definition
+```
+
+### 3. Upload bundle
+
+```bash
+npm run upload
+```
+
+*(for CI/CD, use `npm run upload-ci` with environment variables)*
+
+---
+
+## 🖼️ Example
+
+**Page name → Slug**
+
+| Page name      | Auto-generated slug |
+| -------------- | ------------------- |
+| Coming Soon    | `coming-soon`       |
+| About Us Today | `about-us-today`    |
+| Hello World!   | `hello-world`       |
+
+---
+
+## ⚡ Tech Stack
+
+* ⚛️ React 18
+* 🎨 Contentful Forma 36 (F36 components)
+* 🛠️ Contentful App SDK
+* 📦 contentful-management API
+
+---
+
+## 🤝 Contributing
+
+Pull requests and feature suggestions are welcome 🙌
+
+---
+
+## 👨‍💻 Author
+
+**Mahesh Thorat**  
+[GitHub](https://github.com/maheshmthorat/)
+
+---
+
+## 🫰 Donate
+[buymeacoffee](https://buymeacoffee.com/maheshmthorat)
+
+---
+
+## 📜 License
+
+MIT License © 2025
+
+---
+
+<p align="center">Made with ❤️ for <b>Contentful</b></p>
