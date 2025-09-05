@@ -18,34 +18,30 @@ No more manual typing, just clean and consistent slugs for your content.
 
 ---
 
-## 🛠️ Installation
+## 🚀 Install & Setup Guide
 
-### Step 1: Install from below url
+### 🔗 Step 1: Install the App
 
-https://app.contentful.com/deeplink?link=apps&id=738gJiCsxBeiRIAnZPjL0C
+* Install directly in your Contentful space:
+* 👉 [Click to Install](https://app.contentful.com/deeplink?link=apps&id=738gJiCsxBeiRIAnZPjL0C)
 
-### Step 2: Create the 'Page Name' Field
+### 📝 Step 2: Create the **Page Name** Field
 
-Next, create the field that the slug generator will use to create the slug.
+* Field **Name** → `Page name`
+* Field **ID** → `pageName`
+* This is where you’ll enter your page title.
 
-- The field **Name** is **Page name** and the **Field ID** is **pageName**.
-- This is the field where you'll enter the name of your page.
+### 🏷️ Step 3: Create the **Slug** Field
 
-### Step 3: Create the 'Slug' Field
+* Field **Name** → `Slug`
+* Field **ID** → `slug`
+* Make it **Required** + **Unique**
+* Under **Appearance**, select **Slug Generator**
 
-The first step is to create a new field to store the slug.
+### ⚡ Step 4: Generate the Slug
 
-- The field **Name** is **Slug** and the **Field ID** is **slug**.
-- The field is a **Required field**, meaning you won't be able to publish an entry if it's empty.
-- It's also a **Unique field**, which ensures there aren't any duplicate slugs.
-- Under **Appearance**, select the **Slug Generator** option to have the slug automatically created based on another field.
-
-### Step 4: Generate the Slug
-
-Finally, you can see how the two fields work together.
-
-- You enter the **Page name** (in this case, **Contact Us**).
-- You need to manually click the **Generate Slug** button when you change Page Name.
+* Enter a **Page name** (e.g., *Contact Us*)
+* Click **Generate Slug** → `contact-us` 🎉
 
 ---
 
